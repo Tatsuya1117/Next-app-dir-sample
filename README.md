@@ -76,3 +76,37 @@ and, added rules.
   }
 }
 ```
+## Precautions when Using Chakura UI. 
+
+- Setting @chakra-ui/react as standard causes an error. One cushion is placed in "./Provider.tsx".
+- All Chakra UI components depend on <ChakraProvider>. It only works with Client Component, so if you want to use a UI component you need to wrap it and declare "use client".
+
+### make Provider.tsx
+
+- app/Provider.tsx in
+
+```
+"use client";
+
+import { ChakraProvider } from "@chakra-ui/react";
+
+export default function Provider({ children }: { children: React.ReactNode }) {
+  return <ChakraProvider>{children}</ChakraProvider>;
+}
+```
+
+### How to shere processing.
+
+- app/common/components/index.tsx in
+
+```
+"use client";
+
+export * from "@chakra-ui/react";
+```
+
+and using example
+
+```
+import { Button(example) } from "./common/components";
+```

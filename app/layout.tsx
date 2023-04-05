@@ -1,6 +1,9 @@
 // @chakra-ui/react を標準でセットするとエラーになる。"./Provider.tsx"にてワンクッション置いている。
 import Link from "next/link";
 import Provider from "./Provider";
+import Header from "./Header";
+import Main from "./Main";
+import Footer from "./Footer";
 
 export default function RootLayout({
   children,
@@ -12,16 +15,9 @@ export default function RootLayout({
       <head />
       <body>
         <Provider>
-          <header>
-            <h1>
-              <Link href="/">ブログ</Link>
-            </h1>
-            <Link href="/articles/new">記事を書く</Link>
-          </header>
-          {children}
-          <footer>
-            <small>© 2023 Example Next App</small>
-          </footer>
+          <Header />
+          <Main>{children}</Main>
+          <Footer />
         </Provider>
       </body>
     </html>
