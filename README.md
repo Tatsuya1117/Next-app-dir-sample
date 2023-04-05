@@ -5,13 +5,13 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 first, next and react and react-dom getting.
 
 ```
-sudo yarn add next react react-dom
+(sudo) yarn add next react react-dom
 ```
 
 next, run the development server:
 
 ```bash
-yarn dev
+(sudo) yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -33,27 +33,33 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Deploy on Netlify
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+For this project, we recommend Netlify as the hosthing environment.
+
+Please refer to it as it is just a theorys.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 ## eslint
 
+We have strict rules when using eslint.
+
+However, please note that prettier does not work by default under Linux environment.
+
 ```
-sudo yarn add lint
+(sudo) yarn add lint
 ```
 
 ```
-sudo yarn add prettier
+(sudo) yarn add prettier
 ```
 
 ```
-sudo yarn add eslint-plugin-prettier
+(sudo) yarn add eslint-plugin-prettier
 ```
 
-and, rules added
+and, added rules. 
 
 ```.eslintrc.json
 {
