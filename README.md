@@ -110,3 +110,11 @@ and using example
 ```
 import { Button(example) } from "./common/components";
 ```
+
+## つづき
+
+```
+https://zenn.dev/azukiazusa/articles/next-js-app-dir-tutorial
+
+記事の詳細ページから
+```
