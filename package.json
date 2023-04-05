@@ -10,12 +10,16 @@
     "export": "next export"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.5.5",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
     "@types/node": "18.11.18",
     "@types/react": "18.0.26",
     "@types/react-dom": "18.0.10",
     "eslint": "8.31.0",
     "eslint-config-next": "13.1.1",
     "eslint-plugin-prettier": "^4.2.1",
+    "framer-motion": "^10.10.0",
     "lint": "^0.8.19",
     "next": "^13.2.4",
     "prettier": "^2.8.7",
