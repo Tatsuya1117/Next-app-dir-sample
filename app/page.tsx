@@ -5,7 +5,8 @@ import ArticleList from "./components/ArticleList";
 import { Heading } from "./common/components";
 
 async function getArticles() {
-  const res = await fetch("http://localhost:3000/api/articles", {
+  const domain = process.env.SITE_DOMAIN;
+  const res = await fetch("http://" + domain + "/api/articles", {
     cache: "no-store",
   });
 
