@@ -1,4 +1,4 @@
-import "./globals.css";
+import Link from "next/link";
 
 export default function RootLayout({
   children,
@@ -6,13 +6,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
+    <html lang="ja">
       <head />
-      <body>{children}</body>
+      <body>
+        <header>
+          <h1>
+            <Link href="/">ブログ</Link>
+          </h1>
+          <Link href="/articles/new">記事を書く</Link>
+        </header>
+        {children}
+        <footer>
+          <small>© 2023 Example Next App</small>
+        </footer>
+      </body>
     </html>
   );
 }
