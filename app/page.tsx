@@ -3,11 +3,11 @@ import { Inter } from "next/font/google";
 import { Article } from "./types";
 
 async function getArticles() {
-  const res = await fetch(
-    `https://${process.env.SITE_DOMAIN}` + "/api/articles"
-  );
+  const res = await fetch("http://localhost:3000/api/articles", {
+    cache: "no-store",
+  });
 
-  // エラーハンドリング
+  // error handling
   if (!res.ok) {
     throw new Error("Failed to fetch articles");
   }
