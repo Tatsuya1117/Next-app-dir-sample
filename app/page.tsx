@@ -6,7 +6,7 @@ import { Heading } from "./common/components";
 
 async function getArticles() {
   const domain = process.env.SITE_DOMAIN;
-  const res = await fetch("http://" + domain + "/api/articles", {
+  const res = await fetch(`http://` + domain + `/api/articles/`, {
     cache: "no-store",
   });
 
